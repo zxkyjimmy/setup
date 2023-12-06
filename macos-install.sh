@@ -9,6 +9,8 @@ step "Git"
 git config --global user.name "Yen-Chi Chen"
 git config --global user.email "zxkyjimmy@gmail.com"
 git config --global pull.rebase false
+cp git/.gitignore ${HOME}/
+git config --global core.excludesFile "~/.gitignore"
 
 step "HomeBrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
