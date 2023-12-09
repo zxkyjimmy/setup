@@ -5,13 +5,6 @@ function step(){
   echo "$(tput setaf 10)$1$(tput sgr0)"
 }
 
-step "Git"
-git config --global user.name "Yen-Chi Chen"
-git config --global user.email "zxkyjimmy@gmail.com"
-git config --global pull.rebase false
-cp git/.gitignore ${HOME}/
-git config --global core.excludesFile "~/.gitignore"
-
 step "HomeBrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 if [[ $(uname -p) == 'arm' ]]; then
@@ -19,6 +12,13 @@ if [[ $(uname -p) == 'arm' ]]; then
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ${HOME}/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+step "Git"
+git config --global user.name "Yen-Chi Chen"
+git config --global user.email "zxkyjimmy@gmail.com"
+git config --global pull.rebase false
+cp git/.gitignore ${HOME}/
+git config --global core.excludesFile "~/.gitignore"
 
 step "Install utils"
 brew install htop tree openssh cmake gh julia
