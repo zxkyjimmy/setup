@@ -28,16 +28,13 @@ brew tap homebrew/cask-fonts
 brew install font-sauce-code-pro-nerd-font
 brew install font-caskaydia-cove-nerd-font
 
-# step "Terminal Font"
-# osascript <<'END'
-# tell application "Terminal"
-#     set ProfilesNames to name of every settings set
-#     repeat with ProfileName in ProfilesNames
-#         set font name of settings set ProfileName to "CaskaydiaCove Nerd Font"
-#         set font size of settings set ProfileName to 16
-#     end repeat
-# end tell
-# END
+step "Terminal Font"
+osascript <<'END'
+tell application "Terminal"
+    set font name of settings set "Basic" to "CaskaydiaCoveNF-Regular"
+    set font size of settings set "Basic" to 16
+end tell
+END
 
 step "Install GNU stow"
 brew install stow
