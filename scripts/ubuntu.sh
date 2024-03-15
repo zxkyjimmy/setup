@@ -108,8 +108,8 @@ sudo apt update
 sudo apt install -y nvidia-container-toolkit
 # No runtime/config.toml since nvidia-container-toolkit v1.14.1
 # Don't convert to cdi untill podman v4.1.0
-sudo nvidia-ctk config default --output=/etc/nvidia-container-toolkit/config.toml
-sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-toolkit/config.toml
+# sudo nvidia-ctk config default --output=/etc/nvidia-container-runtime/config.toml
+sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml
 sudo mkdir -p /usr/share/containers/oci/hooks.d
 cat <<EOF | sudo tee /usr/share/containers/oci/hooks.d/oci-nvidia-hook.json
 {
