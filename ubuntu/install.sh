@@ -41,7 +41,7 @@ step "Get useful commands"
 sudo apt update
 sudo apt install -y build-essential
 sudo apt install -y gh curl zsh wget htop vim tree openssh-server lm-sensors \
-                    cmake tmux python3-pip python-is-python3 clang clang-tools
+                    cmake tmux python3-pip python3-venv python-is-python3 clang clang-tools
 
 step "Set ssh port&key"
 sudo sed -E 's;#?(Port ).*;\1'"$Port"';g' -i /etc/ssh/sshd_config
