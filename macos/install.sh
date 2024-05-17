@@ -46,9 +46,9 @@ ssh-keygen -b 4096 -t rsa -f ~/.ssh/id_rsa -q -N "" <<< y
 echo "" # newline
 
 step "Font"
-brew tap homebrew/cask-fonts
-brew install font-sauce-code-pro-nerd-font
-brew install font-caskaydia-cove-nerd-font
+# brew tap homebrew/cask-fonts
+brew install --cask font-sauce-code-pro-nerd-font
+brew install --cask font-caskaydia-cove-nerd-font
 
 step "Get Oh my tmux"
 cd $HOME
