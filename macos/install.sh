@@ -27,6 +27,7 @@ step "HomeBrew"
 if [[ $(uname -p) == 'arm' ]]; then
   step "Set Apple Silicon HomeBrew Path"
   echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' | tee -a ${ZDOTDIR:-$HOME}/.zprofile
+  echo 'FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"' | tee -a ${ZDOTDIR:-$HOME}/.zprofile
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
