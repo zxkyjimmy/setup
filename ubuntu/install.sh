@@ -88,7 +88,7 @@ sudo apt upgrade -y
 sudo apt install -y podman
 sudo sed -E 's;# unqualified-search-registries = \["example.com"\];unqualified-search-registries = \["docker.io"\];1' -i /etc/containers/registries.conf
 
-gpu=$(lspci | grep -i '.* vga .* nvidia .*')
+gpu=$(lspci | grep -i '.* vga .* nvidia .*' || echo "")
 shopt -s nocasematch
 if [[ $gpu == *' nvidia '* ]]; then
   info "Nvidia GPU is present!"
