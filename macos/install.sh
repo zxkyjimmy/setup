@@ -33,7 +33,6 @@ fi
 
 step "Install chezmoi"
 brew install chezmoi
-curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 chezmoi init zxkyjimmy --apply --force
 
 step "Install utils"

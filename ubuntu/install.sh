@@ -56,7 +56,6 @@ sudo chsh -s /usr/bin/zsh ${USER}
 step "Install chezmoi"
 export PATH=$HOME/.local/bin:$PATH
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin
-curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
 chezmoi init zxkyjimmy --apply --force
 
 if [ "$XDG_CURRENT_DESKTOP" = "ubuntu:GNOME" ]; then
