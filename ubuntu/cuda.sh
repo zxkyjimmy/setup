@@ -25,3 +25,22 @@ rm -- \$0
 END
 sudo chmod +x /usr/local/bin/cdi.sh
 (sudo crontab -u root -l 2>/dev/null || true; echo "@reboot sleep 60; /usr/local/bin/cdi.sh") | sudo crontab -u root -
+
+sudo mkdir -p /usr/share/containers/oci/hooks.d
+cat <<EOF | sudo tee /usr/share/containers/oci/hooks.d/oci-nvidia-hook.json
+{
+    "version": "1.0.0",
+    "hook": {
+        "path": "/usr/bin/nvidia-container-toolkit",
+        "args": ["nvidia-container-toolkit", "prestart"],
+        "env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+        ]
+    },
+    "when": {
+        "always": true,
+        "commands": [".*"]
+    },
+    "stages": ["prestart"]
+}
+EOF
