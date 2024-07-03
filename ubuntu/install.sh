@@ -57,6 +57,17 @@ step "Install chezmoi"
 export PATH=$HOME/.local/bin:$PATH
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin
 chezmoi init zxkyjimmy --apply --force
+case $USER in
+  jimmy | zxkyjimmy)
+    info "keep chezmoi"
+    ;;
+  *)
+    info "remove chezmoi directory"
+    rm -rf $HOME/.local/share/chezmoi
+    git config --global --unset user.name
+    git config --global --unset user.email
+    ;;
+esac
 
 if [ "$XDG_CURRENT_DESKTOP" = "ubuntu:GNOME" ]; then
   step "Tweak Terminal"
@@ -120,5 +131,5 @@ if [ ${ip:0:7} == "140.109" ]; then
   curl https://myspace.sinica.edu.tw/public.php\?service\=files\&t\=pGthCoK2eMwJYPt7Ku10REZlwbLk12szeJiw2QSmwsKsIRxMo-KsjqhlH2Ppg5Jm -o xensor.sh
   sudo bash xensor.sh -f
 else
-  info "Without xensor.sh (not in Sinica)"
+  info "Don't install xensor.sh (not in Sinica)"
 fi
