@@ -37,8 +37,13 @@ chezmoi init zxkyjimmy --apply --force
 
 step "Install utils"
 brew install htop tree openssh cmake gh julia tmux neovim
+brew install --cask google-chrome arc
+brew install --cask visual-studio-code
+brew install --cask hyper
 brew install --cask the-unarchiver mos
 brew install --cask topnotch # hide the notch
+brew install --cask slack telegram discord notion webex
+brew install --cask zen-browser
 
 step "SSH"
 [ -d ~/.ssh ] || mkdir ~/.ssh
@@ -58,9 +63,6 @@ cd -
 
 step "Python"
 brew install python
-
-step "HyperTerminal"
-brew install --cask hyper
 
 step "Miniconda 3"
 brew install --cask miniconda
