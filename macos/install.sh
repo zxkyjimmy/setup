@@ -39,7 +39,7 @@ step "Install utils"
 brew install htop tree openssh cmake gh julia tmux neovim
 brew install --cask google-chrome arc
 brew install --cask visual-studio-code
-brew install --cask hyper
+brew install --cask ghostty hyper
 brew install --cask mos the-unarchiver
 brew install --cask topnotch # hide the notch
 brew install --cask slack telegram discord notion webex
