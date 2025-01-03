@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FONT_VERSION="3.2.1"
+FONT_VERSION="3.3.0"
 FONT_NAME="CascadiaCode"
 mkdir -p ~/.local/share/fonts
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v${FONT_VERSION}/${FONT_NAME}.zip

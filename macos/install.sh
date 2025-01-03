@@ -54,6 +54,8 @@ step "Font"
 # brew tap homebrew/cask-fonts
 brew install --cask font-sauce-code-pro-nerd-font
 brew install --cask font-caskaydia-cove-nerd-font
+brew install --cask font-monaspace-nerd-font
+brew install --cask font-meslo-lg-nerd-font
 
 step "Get Oh my tmux"
 cd $HOME
