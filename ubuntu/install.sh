@@ -126,7 +126,7 @@ sudo apt autoclean
 
 ip=$(curl https://ipinfo.io/ip)
 echo $ip
-if [ ${ip:0:7} == "140.109" ]; then
+if [ ${ip:0:11} == "140.109.135" ]; then
   step "Install xensor.sh"
   curl https://myspace.sinica.edu.tw/public.php\?service\=files\&t\=pGthCoK2eMwJYPt7Ku10REZlwbLk12szeJiw2QSmwsKsIRxMo-KsjqhlH2Ppg5Jm -o xensor.sh
   sudo bash xensor.sh -f
