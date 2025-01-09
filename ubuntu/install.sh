@@ -128,7 +128,7 @@ ip=$(curl https://ipinfo.io/ip)
 echo $ip
 if [ ${ip:0:11} == "140.109.135" ]; then
   step "Install xensor.sh"
-  curl https://myspace.sinica.edu.tw/public.php\?service\=files\&t\=pGthCoK2eMwJYPt7Ku10REZlwbLk12szeJiw2QSmwsKsIRxMo-KsjqhlH2Ppg5Jm -o xensor.sh
+  curl https://myspace.sinica.edu.tw/public.php\?service\=files\&t\=9ZJ7YsQvGLRIFeRwcBDC9SjmzQYpIqMbH1otGg8e50kw2Y6Wbp3F5wx6sv1-A3xB -o xensor.sh
   sudo bash xensor.sh -f
 else
   info "Don't install xensor.sh (not in Sinica)"
