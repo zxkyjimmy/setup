@@ -42,8 +42,7 @@ brew install --cask visual-studio-code
 brew install --cask ghostty hyper
 brew install --cask mos the-unarchiver
 brew install --cask topnotch # hide the notch
-brew install --cask slack telegram discord notion webex
-brew install --cask zen-browser
+brew install --cask slack telegram discord notion webex zotero
 
 step "SSH"
 [ -d ~/.ssh ] || mkdir ~/.ssh
@@ -76,6 +75,6 @@ brew install podman
 podman machine init
 
 step "Node Version Manager"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 . $HOME/.nvm/nvm.sh
 nvm install node
