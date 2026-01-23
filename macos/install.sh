@@ -74,7 +74,8 @@ step "Podman"
 brew install podman
 podman machine init
 
-step "Node Version Manager"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-. $HOME/.nvm/nvm.sh
-nvm install node
+# Replace script install with zsh-nvm.
+# step "Node Version Manager"
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+# . $HOME/.nvm/nvm.sh
+# nvm install node

@@ -109,10 +109,11 @@ else
 fi
 shopt -u nocasematch
 
-step "Node Version Manager"
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-. $HOME/.nvm/nvm.sh
-nvm install node
+# Replace script install with zsh-nvm.
+# step "Node Version Manager"
+# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+# . $HOME/.nvm/nvm.sh
+# nvm install node
 
 step "stop cups-browsed"
 sudo systemctl stop cups-browsed.service
