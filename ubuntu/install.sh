@@ -40,7 +40,7 @@ sudo sed -E 's;APT::Periodic::Unattended-Upgrade "1"\;;APT::Periodic::Unattended
 step "Get useful commands"
 sudo apt update
 sudo apt install -y build-essential
-sudo apt install -y gh curl zsh wget htop vim tree openssh-server lm-sensors \
+sudo apt install -y gh curl zsh wget htop btop nvtop vim tree openssh-server lm-sensors \
                     cmake tmux python3-pip python3-venv python-is-python3 clang clang-tools
 
 step "Set ssh port&key"

@@ -36,7 +36,7 @@ brew install chezmoi
 chezmoi init zxkyjimmy --apply --force
 
 step "Install utils"
-brew install htop tree openssh cmake gh julia tmux neovim
+brew install htop btop nvtop tree openssh cmake gh julia tmux neovim
 brew install --cask google-chrome arc
 brew install --cask visual-studio-code
 brew install --cask ghostty hyper
