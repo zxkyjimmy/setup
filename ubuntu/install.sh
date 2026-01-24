@@ -115,6 +115,9 @@ shopt -u nocasematch
 # . $HOME/.nvm/nvm.sh
 # nvm install node
 
+step "Install uv"
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 step "stop cups-browsed"
 sudo systemctl stop cups-browsed.service
 sudo systemctl disable cups-browsed.service
