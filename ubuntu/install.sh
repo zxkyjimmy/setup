@@ -118,6 +118,9 @@ shopt -u nocasematch
 step "Install uv"
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
+step "Install ghostty"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
+
 step "stop cups-browsed"
 sudo systemctl stop cups-browsed.service
 sudo systemctl disable cups-browsed.service
