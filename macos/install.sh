@@ -6,11 +6,11 @@ ztarget='$HOME/.zsh'
 export ZDOTDIR=$(eval echo $ztarget)
 
 function step(){
-  echo "$(tput setaf 10)$1$(tput sgr0)"
+  echo "📦 $(tput setaf 10)$1$(tput sgr0)"
 }
 
 function info(){
-  echo "$(tput setaf 14)$1$(tput sgr0)"
+  echo "📝 $(tput setaf 14)$1$(tput sgr0)"
 }
 
 info "Running macos script"
@@ -38,8 +38,7 @@ chezmoi init zxkyjimmy --apply --force
 step "Install utils"
 brew install -y htop btop nvtop tree openssh cmake gh julia tmux neovim
 brew install --cask google-chrome arc
-brew install --cask visual-studio-code
-brew install --cask ghostty hyper
+brew install --cask visual-studio-code ghostty hyper
 brew install --cask mos the-unarchiver
 brew install --cask topnotch # hide the notch
 brew install --cask slack telegram discord notion webex zotero
@@ -51,10 +50,12 @@ echo "" # newline
 
 step "Font"
 # brew tap homebrew/cask-fonts
-brew install --cask font-sauce-code-pro-nerd-font
-brew install --cask font-caskaydia-cove-nerd-font
-brew install --cask font-monaspace-nerd-font
-brew install --cask font-meslo-lg-nerd-font
+brew install --cask \
+  font-sauce-code-pro-nerd-font \
+  font-caskaydia-cove-nerd-font \
+  font-monaspice-nerd-font \
+  font-meslo-lg-nerd-font \
+  font-annotationmono-nerd-font
 
 step "Get Oh my tmux"
 cd $HOME
