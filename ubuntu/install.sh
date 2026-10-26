@@ -95,7 +95,7 @@ bash miniconda.sh -b -u -p $HOME/.miniconda
 step "Install Podman"
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y podman
+sudo apt install -y podman podman-docker docker-compose-v2
 sudo sed -E 's;# unqualified-search-registries = \["example.com"\];unqualified-search-registries = \["docker.io"\];1' -i /etc/containers/registries.conf
 
 gpu=$(lspci | grep -i '.* vga .* nvidia .*' || echo "")
