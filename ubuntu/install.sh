@@ -121,6 +121,22 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 step "Install ghostty"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
 
+step "Install Visual Studio Code"
+sudo apt update
+sudo apt install -y wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | \
+  sudo gpg --dearmor -o /usr/share/keyrings/microsoft.gpg
+sudo tee /etc/apt/sources.list.d/vscode.sources > /dev/null <<'EOF'
+Types: deb
+URIs: https://packages.microsoft.com/repos/code
+Suites: stable
+Components: main
+Architectures: amd64,arm64,armhf
+Signed-By: /usr/share/keyrings/microsoft.gpg
+EOF
+sudo apt update
+sudo apt install -y code
+
 step "stop cups-browsed"
 sudo systemctl stop cups-browsed.service
 sudo systemctl disable cups-browsed.service
