@@ -2,7 +2,11 @@
 wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2604/x86_64/cuda-keyring_1.1-1_all.deb
 sudo dpkg -i cuda-keyring_1.1-1_all.deb
 sudo apt update
-sudo apt install -y cuda-drivers
+
+# nvidia-driver-615 conflict with kernel 7.0.0-42-generic
+# so we need to pin the driver version to 610
+sudo apt install -y nvidia-driver-pinning-610
+sudo apt install -y nvidia-open
 
 sudo apt install -y nvidia-container-toolkit
 sudo sed -i 's/^#no-cgroups = false/no-cgroups = true/;' /etc/nvidia-container-runtime/config.toml
