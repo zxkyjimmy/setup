@@ -37,7 +37,7 @@ chezmoi init zxkyjimmy --apply --force
 
 step "Install utils"
 brew install -y htop btop nvtop tree openssh cmake gh julia tmux neovim
-brew install --cask google-chrome arc
+brew install --cask google-chrome thebrowsercompany-dia
 brew install --cask visual-studio-code ghostty hyper
 brew install --cask mos the-unarchiver
 brew install --cask topnotch # hide the notch
