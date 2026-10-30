@@ -120,6 +120,8 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 
 step "Install ghostty"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
+mkdir -p "$HOME/.config"
+echo "com.mitchellh.ghostty.desktop" > "$HOME/.config/ubuntu-xdg-terminals.list"
 
 step "Install Visual Studio Code"
 sudo apt update
