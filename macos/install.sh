@@ -83,10 +83,10 @@ podman machine init
 step "Install uv"
 curl -LsSf https://astral.sh/uv/install.sh | env UV_NO_MODIFY_PATH=1 sh
 
-# step "Install Office + Windows App"
-# brew install --cask \
-#   microsoft-word \
-#   microsoft-excel \
-#   microsoft-powerpoint \
-#   microsoft-auto-update \
-#   windows-app
+step "Install Office + Windows App"
+brew install --cask \
+  microsoft-word \
+  microsoft-excel \
+  microsoft-powerpoint \
+  microsoft-auto-update \
+  windows-app
