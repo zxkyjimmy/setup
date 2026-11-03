@@ -136,6 +136,7 @@ Components: main
 Architectures: amd64,arm64,armhf
 Signed-By: /usr/share/keyrings/microsoft.gpg
 EOF
+echo "code code/add-microsoft-repo boolean false" | sudo debconf-set-selections
 sudo apt update
 sudo apt install -y code
 
