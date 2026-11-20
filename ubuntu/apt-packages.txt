@@ -1,0 +1,25 @@
+build-essential
+gh
+curl
+zsh
+wget
+htop
+btop
+nvtop
+vim
+tree
+bat
+openssh-server
+lm-sensors
+cmake
+tmux
+python3-pip
+python3-venv
+python-is-python3
+clang
+clang-tools
+
+# Podman
+podman
+podman-docker
+docker-compose-v2
