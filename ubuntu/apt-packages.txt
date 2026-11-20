@@ -1,14 +1,14 @@
 build-essential
-gh
 curl
 zsh
 wget
 htop
 btop
 nvtop
+lazygit
+gh
 vim
 tree
-bat
 openssh-server
 lm-sensors
 cmake
@@ -23,3 +23,10 @@ clang-tools
 podman
 podman-docker
 docker-compose-v2
+
+# Yazi
+bat
+fzf
+fd-find
+ripgrep
+eza
