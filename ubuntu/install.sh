@@ -44,7 +44,7 @@ run_step "Install Ghostty" scripts/ghostty.sh
 run_step "Install VS Code" scripts/vscode.sh
 run_step "Install Oh my tmux" scripts/tmux.sh
 run_step "Install herdr" scripts/herdr.sh
-run_step "Install neovim" scripts/neovim.sh
+# run_step "Install neovim" scripts/neovim.sh
 run_step "Install yazi" scripts/yazi.sh
 # run_step "Install eza" scripts/eza.sh
 

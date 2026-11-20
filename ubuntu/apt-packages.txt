@@ -8,6 +8,7 @@ nvtop
 lazygit
 gh
 vim
+neovim
 tree
 openssh-server
 lm-sensors
