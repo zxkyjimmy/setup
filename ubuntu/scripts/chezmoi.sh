@@ -5,10 +5,10 @@ sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin
 chezmoi init zxkyjimmy --apply --force
 case $USER in
   jimmy | zxkyjimmy)
-    info "keep chezmoi"
+    echo "keep chezmoi"
     ;;
   *)
-    info "remove chezmoi directory"
+    echo "remove chezmoi directory"
     rm -rf $HOME/.local/share/chezmoi
     git config --global --unset user.name
     git config --global --unset user.email
