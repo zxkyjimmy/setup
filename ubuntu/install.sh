@@ -44,6 +44,7 @@ run_step "Install rustup" scripts/rustup.sh
 run_step "Install Ghostty" scripts/ghostty.sh
 run_step "Install VS Code" scripts/vscode.sh
 run_step "Install herdr" scripts/herdr.sh
+run_step "Install neovim" scripts/neovim.sh
 run_step "Install eza" scripts/eza.sh
 
 ip=$(curl https://ipinfo.io/ip)
