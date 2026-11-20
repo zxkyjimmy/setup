@@ -28,7 +28,6 @@ run_step "Set Time Zone" sudo timedatectl set-timezone Asia/Taipei
 if [ "$XDG_CURRENT_DESKTOP" = "ubuntu:GNOME" ]; then
   run_step "Install Nerd Fonts" scripts/font.sh
 fi
-run_step "Install Oh my tmux" scripts/tmux.sh
 run_step "Install Miniconda3" scripts/conda.sh
 
 gpu=$(lspci | grep -i '.* vga .* nvidia .*' || echo "")
@@ -43,8 +42,10 @@ run_step "Install uv" scripts/uv.sh
 run_step "Install rustup" scripts/rustup.sh
 run_step "Install Ghostty" scripts/ghostty.sh
 run_step "Install VS Code" scripts/vscode.sh
+run_step "Install Oh my tmux" scripts/tmux.sh
 run_step "Install herdr" scripts/herdr.sh
 run_step "Install neovim" scripts/neovim.sh
+run_step "Install yazi" scripts/yazi.sh
 # run_step "Install eza" scripts/eza.sh
 
 ip=$(curl https://ipinfo.io/ip)
