@@ -13,6 +13,10 @@ mapfile -t packages < <(
 echo 'APT::Periodic::Unattended-Upgrade "0";' |
   sudo tee /etc/apt/apt.conf.d/99-disable-unattended-upgrades
 
+# Stop Ubuntu Pro news
+echo '#clear binary::apt::AptCli::Hooks::Upgrade;' |
+  sudo tee /etc/apt/apt.conf.d/21disable-esm-hook
+
 # Install packages
 sudo apt update
 if (( ${#packages[@]} > 0 )); then
