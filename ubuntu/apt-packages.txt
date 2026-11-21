@@ -31,3 +31,4 @@ fzf
 fd-find
 ripgrep
 eza
+fastfetch
