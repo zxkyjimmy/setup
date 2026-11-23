@@ -6,9 +6,9 @@ htop
 btop
 nvtop
 lazygit
+git-delta
 gh
 vim
-neovim
 tree
 openssh-server
 lm-sensors

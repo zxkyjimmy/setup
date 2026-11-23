@@ -1,6 +1,7 @@
 miniconda.sh
 cuda-keyring_1.1-1_all.deb
 xensor.sh
+nvim-linux-x86_64.tar.gz
 
 # Font
 CascadiaCode*

@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+set -euo pipefail
 
 cd $HOME
 git clone https://github.com/gpakosz/.tmux.git

@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 file="apt-packages.txt"
 mapfile -t packages < <(

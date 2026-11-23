@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/mkasberg/ghostty-ubuntu/HEAD/install.sh)"
 mkdir -p "$HOME/.config"

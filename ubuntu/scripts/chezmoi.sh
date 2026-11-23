@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 export PATH=$HOME/.local/bin:$PATH
 sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin

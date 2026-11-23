@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -euo pipefail
 
 FONT_VERSION="3.5.1"
 FONT_NAMES=(

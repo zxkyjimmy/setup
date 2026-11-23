@@ -7,9 +7,11 @@ brew "chezmoi"
 brew "cmake"
 brew "git"
 brew "lazygit"
+brew "git-delta"
 brew "gh"
 brew "python"
 brew "neovim"
+brew "tree-sitter-cli"
 brew "openssh"
 brew "tmux"
 brew "podman"
@@ -23,8 +25,10 @@ brew "eza"
 brew "fd"
 brew "fzf"
 brew "ripgrep"
+brew "rsync"
 brew "ffmpeg"
 brew "zoxide"
+brew "fastfetch"
 
 # Font
 cask "font-annotationmono-nerd-font"
@@ -53,6 +57,12 @@ cask "thebrowsercompany-dia"
 # Coding
 cask "ghostty"
 cask "visual-studio-code"
+cask "zed"
+
+# AI tools
+cask "claude"
+cask "claude-code@latest"
+cask "chatgpt"
 
 # Microsoft products
 cask "microsoft-auto-update"

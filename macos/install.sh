@@ -28,5 +28,6 @@ run_step "Chezmoi initialize" chezmoi init zxkyjimmy --apply --force
 run_step "ssh key generate" scripts/ssh.sh
 run_step "Install Oh my tmux" scripts/tmux.sh
 run_step "Install uv" scripts/uv.sh
+run_step "Install LazyVim" git clone https://github.com/LazyVim/starter ~/.config/nvim
 
 printf '\n🎉 macOS setup completed!\n'
