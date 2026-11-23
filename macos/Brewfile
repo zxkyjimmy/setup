@@ -59,10 +59,15 @@ cask "ghostty"
 cask "visual-studio-code"
 cask "zed"
 
-# AI tools
+# AI desktop app
 cask "claude"
-cask "claude-code@latest"
 cask "chatgpt"
+cask "antigravity"
+
+# AI agents in the terminal
+cask "claude-code@latest"
+cask "codex"
+cask "antigravity-cli"
 
 # Microsoft products
 cask "microsoft-auto-update"

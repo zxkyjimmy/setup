@@ -48,6 +48,8 @@ run_step "Install neovim" scripts/neovim.sh
 run_step "Install LazyVim" git clone https://github.com/LazyVim/starter ~/.config/nvim
 run_step "Install yazi" scripts/yazi.sh
 run_step "Install Claude Code" scripts/claude.sh
+run_step "Install Codex" scripts/codex.sh
+run_step "Install Antigravity" scripts/antigravity.sh
 # run_step "Install eza" scripts/eza.sh
 
 ip=$(curl https://ipinfo.io/ip)
