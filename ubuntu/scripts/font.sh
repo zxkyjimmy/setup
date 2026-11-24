@@ -27,7 +27,12 @@ for FONT_NAME in "${FONT_NAMES[@]}"; do
     find -type f -name '*Windows*' -delete
     cp -r ${FONT_NAME} ${FONT_DIR}
 done
-fc-cache -f -v
+if ! fc-cache -fv ${FONT_DIR}; then
+    echo "Font cache update failed. Retrying..."
+    sleep 1
+    fc-cache -fv ${FONT_DIR}
+fi
+
 
 # Set terminal font
 . /etc/os-release
