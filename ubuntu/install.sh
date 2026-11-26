@@ -47,7 +47,7 @@ run_step "Install VS Code" scripts/vscode.sh
 run_step "Install Oh my tmux" scripts/tmux.sh
 run_step "Install herdr" scripts/herdr.sh
 run_step "Install neovim" scripts/neovim.sh
-run_step "Install LazyVim" git clone https://github.com/LazyVim/starter ~/.config/nvim
+run_step "Install LazyVim" ../common/lazyvim.sh
 run_step "Install yazi" scripts/yazi.sh
 run_step "Install Claude Code" scripts/claude.sh
 run_step "Install Codex" scripts/codex.sh
