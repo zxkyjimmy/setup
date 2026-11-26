@@ -11,6 +11,8 @@ info "Create \$ZDOTDIR"
 [ -d $ZDOTDIR ] || mkdir -p $ZDOTDIR
 cat << EOF | tee -a $HOME/.zshenv
 export ZDOTDIR="$ztarget"
+# Ensure unique PATH entries
+typeset -U PATH path
 EOF
 ln -sf $HOME/.zshenv $ZDOTDIR
 

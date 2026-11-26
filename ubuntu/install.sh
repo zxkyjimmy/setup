@@ -9,9 +9,11 @@ export ZDOTDIR=$(eval echo $ztarget)
 
 info "Create \$ZDOTDIR"
 [ -d $ZDOTDIR ] || mkdir -p $ZDOTDIR
-cat << EOF | tee -a $HOME/.zshenv
+cat <<EOF | tee -a $HOME/.zshenv
 export ZDOTDIR="$ztarget"
 skip_global_compinit=1
+# Ensure unique PATH entries
+typeset -U PATH path
 EOF
 ln -sf $HOME/.zshenv $ZDOTDIR
 
