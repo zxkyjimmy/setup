@@ -5,6 +5,7 @@ wget
 htop
 btop
 nvtop
+git
 lazygit
 git-delta
 gh

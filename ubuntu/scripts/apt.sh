@@ -18,6 +18,13 @@ echo 'APT::Periodic::Unattended-Upgrade "0";' |
 echo '#clear binary::apt::AptCli::Hooks::Upgrade;' |
   sudo tee /etc/apt/apt.conf.d/21disable-esm-hook
 
+# Add the latest git for config-based hooks
+if ! command -v add-apt-repository &>/dev/null; then
+  sudo apt update
+  sudo apt install -y software-properties-common
+fi
+sudo add-apt-repository -y -n ppa:git-core/ppa
+
 # Install packages
 sudo apt update
 if (( ${#packages[@]} > 0 )); then
