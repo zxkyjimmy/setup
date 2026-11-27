@@ -53,6 +53,7 @@ run_step "Install yazi" scripts/yazi.sh
 run_step "Install Claude Code" scripts/claude.sh
 run_step "Install Codex" scripts/codex.sh
 run_step "Install Antigravity" scripts/antigravity.sh
+run_step "Setting AI agent attribution" ../common/ai-attribution.sh
 
 ip=$(curl https://ipinfo.io/ip)
 echo $ip

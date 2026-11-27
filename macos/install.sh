@@ -32,5 +32,6 @@ run_step "Install Oh my tmux" ../common/tmux.sh
 run_step "Install uv" ../common/uv.sh
 run_step "Install nvm" ../common/nvm.sh
 run_step "Install LazyVim" ../common/lazyvim.sh
+run_step "Setting AI agent attribution" ../common/ai-attribution.sh
 
 printf '\n🎉 macOS setup completed!\n'
