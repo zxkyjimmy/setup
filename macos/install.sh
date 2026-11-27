@@ -27,9 +27,10 @@ fi
 run_step "Homebrew packages" \
   brew bundle install --no-upgrade --file=Brewfile --verbose
 run_step "Chezmoi initialize" chezmoi init zxkyjimmy --apply --force
-run_step "ssh key generate" scripts/ssh.sh
-run_step "Install Oh my tmux" scripts/tmux.sh
-run_step "Install uv" scripts/uv.sh
+run_step "ssh key generate" ../common/ssh.sh
+run_step "Install Oh my tmux" ../common/tmux.sh
+run_step "Install uv" ../common/uv.sh
+run_step "Install nvm" ../common/nvm.sh
 run_step "Install LazyVim" ../common/lazyvim.sh
 
 printf '\n🎉 macOS setup completed!\n'

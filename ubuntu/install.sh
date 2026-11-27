@@ -25,7 +25,7 @@ export LC_ALL=en_US.UTF-8
 run_step "APT packages" scripts/apt.sh
 run_step "Change default shell" sudo chsh -s /usr/bin/zsh ${USER}
 run_step "Install chezmoi" scripts/chezmoi.sh
-run_step "ssh key generate" scripts/ssh.sh
+run_step "ssh key generate" ../common/ssh.sh
 run_step "Set Time Zone" sudo timedatectl set-timezone Asia/Taipei
 if [ "$XDG_CURRENT_DESKTOP" = "ubuntu:GNOME" ]; then
   run_step "Install Nerd Fonts" scripts/font.sh
@@ -40,11 +40,12 @@ if [[ $gpu == *' nvidia '* ]]; then
 fi
 shopt -u nocasematch
 
-run_step "Install uv" scripts/uv.sh
+run_step "Install uv" ../common/uv.sh
+run_step "Install nvm" ../common/nvm.sh
 run_step "Install rustup" scripts/rustup.sh
 run_step "Install Ghostty" scripts/ghostty.sh
 run_step "Install VS Code" scripts/vscode.sh
-run_step "Install Oh my tmux" scripts/tmux.sh
+run_step "Install Oh my tmux" ../common/tmux.sh
 run_step "Install herdr" scripts/herdr.sh
 run_step "Install neovim" scripts/neovim.sh
 run_step "Install LazyVim" ../common/lazyvim.sh
@@ -52,7 +53,6 @@ run_step "Install yazi" scripts/yazi.sh
 run_step "Install Claude Code" scripts/claude.sh
 run_step "Install Codex" scripts/codex.sh
 run_step "Install Antigravity" scripts/antigravity.sh
-# run_step "Install eza" scripts/eza.sh
 
 ip=$(curl https://ipinfo.io/ip)
 echo $ip
